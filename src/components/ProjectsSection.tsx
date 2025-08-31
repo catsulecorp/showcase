@@ -60,13 +60,12 @@ const ProjectsSection = () => {
         </div>
         
         <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
+          <a 
+            href="#contact" 
+            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+          >
             ¿Tienes un proyecto en mente? Hagamos algo increíble juntos.
-          </p>
-          <button className="group relative px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/30">
-            <span className="relative z-10">Ver Todos los Proyectos</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

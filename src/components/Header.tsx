@@ -25,13 +25,10 @@ const Header = () => {
           <a href="#about" className="text-foreground hover:text-primary transition-colors">
             Nosotros
           </a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-            Contacto
-          </a>
         </nav>
         
-        <Button variant="tech" size="sm">
-          Trabajemos Juntos
+        <Button variant="tech" size="sm" asChild>
+          <a href="#contact">Trabajemos Juntos</a>
         </Button>
       </div>
     </header>
