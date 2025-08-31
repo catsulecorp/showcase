@@ -1,30 +1,29 @@
 import ProjectCard from "@/components/ProjectCard";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project1 from "@/assets/project-1.png";
+import placeholder from "/placeholder.svg";
 
 const projects = [
   {
-    title: "TechCommerce Pro",
-    description: "Plataforma de e-commerce avanzada con dashboard administrativo completo y sistema de pagos integrado",
+    title: "Alianza La Libertad Avanza Córdoba",
+    description: "Plataforma web fullstack para la transparencia, acceso ágil y centralización de la información institucional de una organización política.",
     image: project1,
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind"],
+    technologies: ["Vue 3", "TypeScript", "Nuxt 3", "Tailwind CSS", "Supabase", "PostgreSQL", "Auth", "Storage"],
+    liveUrl: "https://www.alianzalalibertadavanzacordoba.com.ar/",
+    youtubeUrl: "https://www.youtube.com/watch?v=qX0PC89YqlY"
+  },
+  {
+    title: "Lorem Ipsum Project",
+    description: "Lorem ipsum sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
+    technologies: ["Lorem", "Ipsum","Sit", "Amet"],
     liveUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "SaaS Analytics Hub",
-    description: "Dashboard de analytics en tiempo real para empresas con visualización de datos interactiva y reportes automáticos",
-    image: project2,
-    technologies: ["Vue.js", "Python", "Redis", "D3.js", "FastAPI"],
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "MobileFirst App",
-    description: "Aplicación móvil híbrida con sincronización offline y notificaciones push para gestión empresarial",
-    image: project3,
-    technologies: ["React Native", "Firebase", "Redux", "TypeScript", "Expo"],
+    title: "Lorem Ipsum Project",
+    description: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
+    technologies: ["Consectetur", "adipiscing", "elit", "sed", "do"],
     liveUrl: "#",
     githubUrl: "#"
   }

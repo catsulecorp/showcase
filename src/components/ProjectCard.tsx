@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Youtube } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -10,9 +10,10 @@ interface ProjectCardProps {
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
+  youtubeUrl?: string;
 }
 
-const ProjectCard = ({ title, description, image, technologies, liveUrl, githubUrl }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, technologies, liveUrl, githubUrl, youtubeUrl }: ProjectCardProps) => {
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-accent/50 hover:border-primary/30">
       <div className="relative overflow-hidden rounded-t-lg">
@@ -49,7 +50,14 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
               </a>
             </Button>
           )}
-          {githubUrl && (
+          {youtubeUrl && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={youtubeUrl} target="_blank" rel="noopener noreferrer">
+                <Youtube className="w-4 h-4" />
+              </a>
+            </Button>
+          )}
+          {githubUrl && !youtubeUrl && (
             <Button variant="outline" size="sm" asChild>
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />
