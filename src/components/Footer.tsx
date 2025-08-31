@@ -15,12 +15,12 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-2xl font-bold">Catsule Corp</h3>
-                <p className="text-background/70">Development Agency</p>
+                <p className="text-background/70">Custom Solutions Agency</p>
               </div>
             </div>
             <p className="text-background/80 leading-relaxed max-w-md">
-              Transformamos ideas en experiencias digitales extraordinarias. 
-              Especialistas en desarrollo web moderno con tecnología de vanguardia.
+              Orquestamos los mejores agentes especializados del mercado con responsabilidad 
+              para entregar soluciones digitales a medida que transforman negocios.
             </p>
           </div>
 
@@ -28,10 +28,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Servicios</h4>
             <ul className="space-y-2 text-background/80">
-              <li>Desarrollo Web</li>
-              <li>Aplicaciones SaaS</li>
-              <li>E-commerce</li>
-              <li>Apps Móviles</li>
+              <li>Soluciones a Medida</li>
+              <li>Orquestación de Agentes</li>
+              <li>Automatización Inteligente</li>
+              <li>Consultoría Tecnológica</li>
             </ul>
           </div>
 

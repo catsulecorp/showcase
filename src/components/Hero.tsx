@@ -25,8 +25,8 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto leading-relaxed">
-            Desarrollamos experiencias web futuristas que transforman ideas en 
-            <span className="text-primary font-semibold"> tecnología avanzada</span>
+            Nos apalancamos responsablemente con los mejores agentes del mercado para construir 
+            <span className="text-primary font-semibold"> soluciones a medida</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">

@@ -48,8 +48,8 @@ const ProjectsSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Cada proyecto es una misión única donde combinamos tecnología de vanguardia 
-            con diseño innovador para crear soluciones que superan las expectativas.
+            Cada proyecto es una misión única donde orquestamos los mejores agentes especializados 
+            del mercado para crear soluciones a medida que superan las expectativas.
           </p>
         </div>
 
