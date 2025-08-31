@@ -16,17 +16,38 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, image, technologies, liveUrl, githubUrl, youtubeUrl }: ProjectCardProps) => {
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-accent/50 hover:border-primary/30">
-      <div className="relative overflow-hidden rounded-t-lg">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative overflow-hidden rounded-t-lg cursor-pointer">
+        {liveUrl ? (
+          <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </a>
+        ) : (
+          <>
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </>
+        )}
       </div>
       
       <CardHeader>
-        <CardTitle className="text-primary text-xl">{title}</CardTitle>
+        {liveUrl ? (
+          <CardTitle className="text-primary text-xl cursor-pointer hover:text-primary/80 transition-colors">
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+              {title}
+            </a>
+          </CardTitle>
+        ) : (
+          <CardTitle className="text-primary text-xl">{title}</CardTitle>
+        )}
         <CardDescription className="text-muted-foreground">
           {description}
         </CardDescription>

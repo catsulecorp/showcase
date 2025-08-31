@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import project1 from "@/assets/project-1.png";
+import project2 from "@/assets/project-2.png";
 import placeholder from "/placeholder.svg";
 
 const projects = [
@@ -12,12 +13,12 @@ const projects = [
     youtubeUrl: "https://www.youtube.com/watch?v=qX0PC89YqlY"
   },
   {
-    title: "Lorem Ipsum Project",
-    description: "Lorem ipsum sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    technologies: ["Lorem", "Ipsum","Sit", "Amet"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Entrenar.app",
+    description: "App para que estudiantes de la Universidad Nacional de Córdoba puedan hacer seguimiento de sus entrenamientos físicos y mantenerse motivados.",
+    image: project2,
+    technologies: ["React", "TypeScript", "Go", "Material UI","Supabase", "PostgreSQL", "Google OAuth", "Testing Libraries"],
+    liveUrl: "https://entrenar.app",
+    githubUrl: "https://github.com/goalritmo/gym"
   },
   {
     title: "Lorem Ipsum Project",
