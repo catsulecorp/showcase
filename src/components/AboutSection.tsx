@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import catsuleHQ from "/catusle-corp-hq.png";
+import catsule from "/catsule.png";
 
 const AboutSection = () => {
   return (
@@ -29,13 +29,15 @@ const AboutSection = () => {
                 </div>
               </div>
               
-              <div className="relative group">
-                <img 
-                  src={catsuleHQ} 
-                  alt="Catsule Corp Headquarters" 
-                  className="w-full h-80 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent rounded-2xl" />
+              <div className="relative group overflow-hidden rounded-2xl cursor-pointer">
+                <a href="https://t.co/PHecmJGMV6" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src={catsule} 
+                    alt="Catsule" 
+                    className="w-full h-80 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+                </a>
               </div>
             </div>
             

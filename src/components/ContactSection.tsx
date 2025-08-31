@@ -23,9 +23,9 @@ const ContactSection = () => {
             {/* Contact Form */}
             <Card className="border-accent shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">Empecemos tu Proyecto</CardTitle>
+                <CardTitle className="text-2xl text-primary">Construyamos tu Proyecto</CardTitle>
                 <CardDescription>
-                  Cuéntanos sobre tu proyecto y te contactaremos lo antes posible
+                  Contanos sobre tu proyecto y te contactaremos lo antes posible
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
