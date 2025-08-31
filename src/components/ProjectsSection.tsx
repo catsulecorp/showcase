@@ -35,16 +35,10 @@ const ProjectsSection = () => {
     <section id="projects" className="py-24 bg-gradient-to-br from-background via-accent/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-primary" />
-            <span className="text-primary font-semibold uppercase tracking-wider text-sm">
-              Nuestros Proyectos
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+              Proyectos
             </span>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-primary" />
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Experiencias <span className="text-primary">Digitales</span> Extraordinarias
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
