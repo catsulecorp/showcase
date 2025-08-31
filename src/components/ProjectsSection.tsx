@@ -6,7 +6,7 @@ import project3 from "@/assets/project-3.jpg";
 const projects = [
   {
     title: "TechCommerce Pro",
-    description: "Plataforma de e-commerce avanzada con dashboard administrativo completo y sistema de pagos integrado.",
+    description: "Plataforma de e-commerce avanzada con dashboard administrativo completo y sistema de pagos integrado",
     image: project1,
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind"],
     liveUrl: "#",
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "SaaS Analytics Hub",
-    description: "Dashboard de analytics en tiempo real para empresas con visualización de datos interactiva y reportes automáticos.",
+    description: "Dashboard de analytics en tiempo real para empresas con visualización de datos interactiva y reportes automáticos",
     image: project2,
     technologies: ["Vue.js", "Python", "Redis", "D3.js", "FastAPI"],
     liveUrl: "#",
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "MobileFirst App",
-    description: "Aplicación móvil híbrida con sincronización offline y notificaciones push para gestión empresarial.",
+    description: "Aplicación móvil híbrida con sincronización offline y notificaciones push para gestión empresarial",
     image: project3,
     technologies: ["React Native", "Firebase", "Redux", "TypeScript", "Expo"],
     liveUrl: "#",
@@ -32,28 +32,23 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 bg-gradient-to-br from-background via-accent/20 to-background">
+    <section id="projects" className="py-20 bg-gradient-to-br from-background via-accent/20 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              Proyectos
-            </span>
+          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6">
+            Proyectos
           </h2>
+          <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-8" />
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Cada proyecto es una misión única donde orquestamos los mejores agentes especializados 
-            del mercado para crear soluciones a medida que superan las expectativas.
+            del mercado para crear soluciones a medida que superan las expectativas
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index}
-              className="opacity-0 animate-in slide-in-from-bottom-8 duration-700"
-              style={{ animationDelay: `${index * 200}ms`, animationFillMode: 'forwards' }}
-            >
+            <div key={index}>
               <ProjectCard {...project} />
             </div>
           ))}
@@ -61,10 +56,10 @@ const ProjectsSection = () => {
         
         <div className="text-center mt-16">
           <a 
-            href="#contact" 
-            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+            href="/contacto" 
+            className="text-muted-foreground hover:text-primary-glow transition-colors cursor-pointer"
           >
-            ¿Tienes un proyecto en mente? Hagamos algo increíble juntos.
+            ¿Tienes un proyecto en mente? Hagamos algo increíble juntos
           </a>
         </div>
       </div>

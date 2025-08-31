@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,10 +20,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Capsule Corp blue theme */
-    --primary: 214 100% 40%;
+    /* Catsule Corp brand colors */
+    --primary: 207 75% 63%; /* #55A8EA */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 214 100% 60%;
+    --primary-glow: 45 92% 56%; /* #F8CB27 */
 
     --secondary: 210 15% 95%;
     --secondary-foreground: 220 15% 15%;
@@ -29,20 +31,19 @@ All colors MUST be HSL.
     --muted: 210 15% 96%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 214 50% 92%;
-    --accent-foreground: 214 100% 40%;
+    --accent: 45 92% 95%; /* Light version of #F8CB27 */
+    --accent-foreground: 207 75% 63%; /* #55A8EA */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 214 100% 40%;
+    --ring: 207 75% 63%; /* #55A8EA */
 
     --radius: 0.8rem;
 
-    /* Custom Capsule Corp effects */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    /* Custom Catsule Corp effects */
     --gradient-tech: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
     --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
     --shadow-tech: 0 10px 40px -10px hsl(var(--primary) / 0.2);
@@ -76,7 +77,7 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 207 75% 63%; /* #55A8EA */
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -85,8 +86,8 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 92% 15%; /* Dark version of #F8CB27 */
+    --accent-foreground: 207 75% 63%; /* #55A8EA */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -111,6 +112,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }

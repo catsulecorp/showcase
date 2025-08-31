@@ -1,8 +1,8 @@
-import catsuleLogo from "@/assets/catsule-logo.png";
+import catsuleLogo from "/catsule-corp-logo-arg-transparent.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-foreground text-background pt-16 pb-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -11,16 +11,16 @@ const Footer = () => {
               <img 
                 src={catsuleLogo} 
                 alt="Catsule Corp Logo" 
-                className="w-10 h-10 rounded-full"
+                className="w-12 h-12"
+                style={{ filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))' }}
               />
               <div>
                 <h3 className="text-2xl font-bold">Catsule Corp</h3>
-                <p className="text-background/70">Custom Solutions Agency</p>
+                <p className="text-background/70">Soluciones Sorprendentes</p>
               </div>
             </div>
             <p className="text-background/80 leading-relaxed max-w-md">
-              Orquestamos los mejores agentes especializados del mercado con responsabilidad 
-              para entregar soluciones digitales a medida que transforman negocios.
+              Orquestamos los mejores agentes del mercado para crear soluciones digitales innovadoras
             </p>
           </div>
 
@@ -28,10 +28,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Servicios</h4>
             <ul className="space-y-2 text-background/80">
-              <li>Soluciones a Medida</li>
-              <li>Orquestación de Agentes</li>
-              <li>Automatización Inteligente</li>
-              <li>Consultoría Tecnológica</li>
+              <li>Desarrollo Web</li>
+              <li>Sistemas a Medida</li>
+              <li>Integración de APIs</li>
             </ul>
           </div>
 
@@ -39,17 +38,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Contacto</h4>
             <ul className="space-y-2 text-background/80">
-              <li>hello@catsulecorp.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>LinkedIn</li>
-              <li>GitHub</li>
+              <li>catsulecorp@gmail.com</li>
+              <li><a href="https://www.linkedin.com/company/catsulecorp/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-glow transition-colors">LinkedIn</a></li>
+              {/* <li>GitHub</li> */}
             </ul>
           </div>
         </div>
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 Catsule Corp. Todos los derechos reservados. • Powered by Capsule Technology
+            © 2025 Catsule Corp. Todos los derechos reservados.
           </p>
         </div>
       </div>

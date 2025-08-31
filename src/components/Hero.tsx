@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-bg.jpg";
+import heroBackground from "/catusle-corp-hq.png";
 
 const Hero = () => {
   return (
@@ -11,37 +10,20 @@ const Hero = () => {
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-accent/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/25 to-background/10" />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-32">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold text-primary tracking-tight">
-              CATSULE
-              <span className="block text-primary-glow">CORP</span>
-            </h1>
-            <div className="h-1 w-32 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full" />
           </div>
           
-          <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto leading-relaxed">
-            Nos apalancamos responsablemente con los mejores agentes del mercado para construir 
-            <span className="text-primary font-semibold"> soluciones a medida</span>
-          </p>
+
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              Ver Proyectos
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-              Conocer Más
-            </Button>
-          </div>
+
         </div>
         
-        {/* Tech Elements */}
-        <div className="absolute top-1/2 left-8 w-2 h-32 bg-gradient-to-b from-primary to-transparent rounded-full opacity-60" />
-        <div className="absolute top-1/2 right-8 w-2 h-24 bg-gradient-to-b from-primary-glow to-transparent rounded-full opacity-60" />
+
       </div>
     </section>
   );

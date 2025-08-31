@@ -9,14 +9,13 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Contacto
-              </span>
+            <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6">
+              Contacto
             </h2>
+            <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-8" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              ¿Listo para orquestar tu próximo proyecto? Conectemos y hagamos realidad 
-              tu visión con los mejores agentes especializados del mercado.
+              Listos para tu próximo proyecto. Conectemos y hagamos realidad 
+              tu visión con los mejores agentes especializados del mercado
             </p>
           </div>
 
@@ -26,7 +25,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">Empecemos tu Proyecto</CardTitle>
                 <CardDescription>
-                  Cuéntanos sobre tu proyecto y te conectaremos con los agentes perfectos
+                  Cuéntanos sobre tu proyecto y te contactaremos lo antes posible
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -56,7 +55,7 @@ const ContactSection = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Tipo de Proyecto
                   </label>
-                  <Input placeholder="Web App, E-commerce, SaaS, etc." />
+                  <Input placeholder="Web App, E-commerce, SaaS, etc" />
                 </div>
                 
                 <div>
@@ -64,7 +63,7 @@ const ContactSection = () => {
                     Describe tu Proyecto
                   </label>
                   <Textarea 
-                    placeholder="Cuéntanos sobre tu visión, objetivos y requirements técnicos..."
+                    placeholder="Cuéntanos sobre tu visión, objetivos y requirementos técnicos"
                     className="min-h-[120px]"
                   />
                 </div>
@@ -88,11 +87,11 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">hello@catsulecorp.com</p>
+                      <p className="text-muted-foreground">catsulecorp@gmail.com</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
+                  {/* <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <span className="text-primary font-semibold">📞</span>
                     </div>
@@ -101,7 +100,7 @@ const ContactSection = () => {
                       <p className="text-muted-foreground">+1 (555) 123-4567</p>
                     </div>
                   </div>
-                  
+                   */}
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <span className="text-primary font-semibold">🌍</span>
@@ -122,21 +121,17 @@ const ContactSection = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-foreground">Lunes - Viernes</span>
-                      <span className="text-muted-foreground">9:00 AM - 6:00 PM</span>
+                      <span className="text-muted-foreground">8:00 AM - 8:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground">Sábados</span>
-                      <span className="text-muted-foreground">10:00 AM - 2:00 PM</span>
+                      <span className="text-muted-foreground">11:00 AM - 8:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-foreground">Domingos</span>
-                      <span className="text-muted-foreground">Cerrado</span>
+                      <span className="text-muted-foreground">Recarga de Energía</span>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Respuesta típica en 24 horas.
-                  </p>
                 </CardContent>
               </Card>
 
@@ -146,8 +141,7 @@ const ContactSection = () => {
                     ¿Proyecto Urgente?
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    Para proyectos con timeline acelerado, contáctanos directamente. 
-                    Nuestros agentes premium están disponibles 24/7.
+                    Para proyectos con timeline acelerado, contáctanos directamente
                   </p>
                   <Button variant="tech" className="w-full">
                     Contacto Urgente
