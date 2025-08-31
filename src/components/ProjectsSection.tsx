@@ -21,10 +21,10 @@ const projects = [
     githubUrl: "https://github.com/goalritmo/gym"
   },
   {
-    title: "Lorem Ipsum Project",
-    description: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    technologies: ["Consectetur", "adipiscing", "elit", "sed", "do"],
+    title: "Tu próximo proyecto podría aparecer aquí",
+    description: "Este espacio está reservado para mostrar el proyecto que construiremos juntos. ¿Tienes una idea? Conectemos y hagamos realidad tu visión con nuestros agentes de IA especializados.",
+    image: "/catsule.png",
+    technologies: ["Próximamente"],
     liveUrl: "#",
     githubUrl: "#"
   }
@@ -54,14 +54,7 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-16">
-          <a 
-            href="/contacto" 
-            className="text-muted-foreground hover:text-primary-glow transition-colors cursor-pointer"
-          >
-            ¿Tienes un proyecto en mente? Hagamos algo increíble juntos
-          </a>
-        </div>
+
       </div>
     </section>
   );

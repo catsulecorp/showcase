@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Youtube } from "lucide-react";
+import { ExternalLink, Github, Youtube, Handshake } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -15,10 +15,10 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, image, technologies, liveUrl, githubUrl, youtubeUrl }: ProjectCardProps) => {
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-accent/50 hover:border-primary/30">
+    <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-accent/50 hover:border-primary/30 h-full flex flex-col">
       <div className="relative overflow-hidden rounded-t-lg cursor-pointer">
         {liveUrl ? (
-          <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+          <a href={liveUrl === "#" ? "/contacto" : liveUrl} target={liveUrl === "#" ? "_self" : "_blank"} rel={liveUrl === "#" ? "" : "noopener noreferrer"}>
             <img 
               src={image} 
               alt={title}
@@ -40,20 +40,20 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
       
       <CardHeader>
         {liveUrl ? (
-          <CardTitle className="text-primary text-xl cursor-pointer hover:text-primary/80 transition-colors">
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+          <CardTitle className={`text-xl cursor-pointer transition-colors ${title === "Tu próximo proyecto podría aparecer aquí" ? "text-sky-500 group-hover:text-yellow-500" : "text-yellow-500 hover:text-yellow-400"}`}>
+            <a href={liveUrl === "#" ? "/contacto" : liveUrl} target={liveUrl === "#" ? "_self" : "_blank"} rel={liveUrl === "#" ? "" : "noopener noreferrer"}>
               {title}
             </a>
           </CardTitle>
         ) : (
-          <CardTitle className="text-primary text-xl">{title}</CardTitle>
+          <CardTitle className={`text-xl ${title === "Tu próximo proyecto podría aparecer aquí" ? "text-sky-500" : "text-yellow-500"}`}>{title}</CardTitle>
         )}
         <CardDescription className="text-muted-foreground">
           {description}
         </CardDescription>
       </CardHeader>
       
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 flex-1 flex flex-col">
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="secondary" className="text-xs">
@@ -62,12 +62,17 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
           ))}
         </div>
         
-        <div className="flex gap-3 pt-2">
+        <div className="flex gap-3 pt-2 mt-auto">
           {liveUrl && (
-            <Button variant="tech" size="sm" className="flex-1" asChild>
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Ver Proyecto
+            <Button 
+              variant={liveUrl === "#" ? "tech" : "default"} 
+              size="sm" 
+              className={`${liveUrl === "#" ? "w-full" : "flex-1"} ${liveUrl !== "#" ? "bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400" : "group-hover:bg-yellow-500 group-hover:text-white group-hover:border-yellow-500"}`} 
+              asChild
+            >
+              <a href={liveUrl === "#" ? "/contacto" : liveUrl} target={liveUrl === "#" ? "_self" : "_blank"} rel={liveUrl === "#" ? "" : "noopener noreferrer"}>
+                {liveUrl === "#" ? <Handshake className="w-4 h-4 mr-2" /> : <ExternalLink className="w-4 h-4 mr-2" />}
+                {liveUrl === "#" ? "Trabajemos juntos" : "Ver Proyecto"}
               </a>
             </Button>
           )}
@@ -78,7 +83,7 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
               </a>
             </Button>
           )}
-          {githubUrl && !youtubeUrl && (
+          {githubUrl && !youtubeUrl && liveUrl !== "#" && (
             <Button variant="outline" size="sm" asChild>
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />
