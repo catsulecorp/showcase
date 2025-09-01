@@ -27,7 +27,7 @@ const AboutSection = () => {
                   su expertise único, resultando en soluciones que destacan por su calidad y precisión.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Ofrecemos <strong>Desarrollo Web</strong>, <strong>Sistemas a Medida</strong> e <strong>Integración de APIs</strong>, 
+                  Ofrecemos <strong>Desarrollo Web</strong>, <strong>Sistemas a Medida</strong>, <strong>Integración de APIs</strong>, 
                   creando soluciones sorprendentes que transforman ideas en realidades digitales.
                 </p>
                 </div>
