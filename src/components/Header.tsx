@@ -57,7 +57,7 @@ const Header = () => {
             onClick={toggleMenu}
             className="p-4 hover:bg-transparent group rounded-md transition-colors"
           >
-            {isMenuOpen ? <X className="h-8 w-8 text-foreground group-hover:text-yellow-500 transition-colors" /> : <Menu className="h-8 w-8 text-foreground group-hover:text-yellow-500 transition-colors" />}
+            {isMenuOpen ? <X className="h-8 w-8 text-foreground transition-colors" /> : <Menu className="h-8 w-8 text-foreground group-hover:text-yellow-500 transition-colors" />}
           </button>
         </div>
       </div>

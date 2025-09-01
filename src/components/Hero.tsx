@@ -3,11 +3,11 @@ import heroBackground from "/catusle-corp-hq.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
+                {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center md:bg-center bg-right-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+          />
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/25 to-background/10" />
