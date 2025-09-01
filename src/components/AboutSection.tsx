@@ -24,7 +24,11 @@ const AboutSection = () => {
                   En Catsule Corp orquestamos los mejores agentes de IA especializados para crear soluciones 
                   digitales excepcionales. Nuestro enfoque combina innovación y creatividad para ir más allá 
                   de lo convencional. Cada proyecto se convierte en una sinfonía donde cada agente aporta 
-                  su expertise único, resultando en soluciones que destacan por su calidad y precisión
+                  su expertise único, resultando en soluciones que destacan por su calidad y precisión.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Ofrecemos <strong>Desarrollo Web</strong>, <strong>Sistemas a Medida</strong> e <strong>Integración de APIs</strong>, 
+                  creando soluciones sorprendentes que transforman ideas en realidades digitales.
                 </p>
                 </div>
               </div>

@@ -1,6 +1,11 @@
 import catsuleLogo from "/catsule-corp-logo-arg-transparent.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-foreground text-background pt-16 pb-8">
       <div className="container mx-auto px-6">
@@ -38,7 +43,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Contacto</h4>
             <ul className="space-y-2 text-background/80">
-              <li>catsulecorp@gmail.com</li>
+              <li><Link to="/contacto" onClick={scrollToTop} className="hover:text-yellow-500 transition-colors">catsulecorp@gmail.com</Link></li>
               <li><a href="https://www.linkedin.com/company/catsulecorp/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-glow transition-colors">LinkedIn</a></li>
               {/* <li>GitHub</li> */}
             </ul>
