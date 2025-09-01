@@ -67,12 +67,12 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
             <Button 
               variant={liveUrl === "#" ? "tech" : "default"} 
               size="sm" 
-              className={`${liveUrl === "#" ? "w-full" : "flex-1"} ${liveUrl !== "#" ? "bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400" : "group-hover:bg-yellow-500 group-hover:text-white group-hover:border-yellow-500"}`} 
+              className={`${title === "Tu próximo proyecto podría aparecer aquí" ? "w-full" : "flex-1"} ${title !== "Tu próximo proyecto podría aparecer aquí" ? "bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400" : "group-hover:bg-yellow-500 group-hover:text-white group-hover:border-yellow-500"}`} 
               asChild
             >
-              <a href={liveUrl === "#" ? "/contacto" : liveUrl} target={liveUrl === "#" ? "_self" : "_blank"} rel={liveUrl === "#" ? "" : "noopener noreferrer"}>
-                {liveUrl === "#" ? <Handshake className="w-4 h-4 mr-2" /> : <ExternalLink className="w-4 h-4 mr-2" />}
-                {liveUrl === "#" ? "Trabajemos juntos" : "Ver Proyecto"}
+              <a href={title === "Tu próximo proyecto podría aparecer aquí" ? "/contacto" : liveUrl} target={title === "Tu próximo proyecto podría aparecer aquí" ? "_self" : "_blank"} rel={title === "Tu próximo proyecto podría aparecer aquí" ? "" : "noopener noreferrer"}>
+                {title === "Tu próximo proyecto podría aparecer aquí" ? <Handshake className="w-4 h-4 mr-2" /> : <ExternalLink className="w-4 h-4 mr-2" />}
+                {title === "Tu próximo proyecto podría aparecer aquí" ? "Trabajemos juntos" : "Ver Proyecto"}
               </a>
             </Button>
           )}
@@ -83,7 +83,7 @@ const ProjectCard = ({ title, description, image, technologies, liveUrl, githubU
               </a>
             </Button>
           )}
-          {githubUrl && !youtubeUrl && liveUrl !== "#" && (
+          {githubUrl && !youtubeUrl && title !== "Tu próximo proyecto podría aparecer aquí" && (
             <Button variant="outline" size="sm" asChild>
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />

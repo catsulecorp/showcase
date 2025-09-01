@@ -4,13 +4,21 @@ import project2 from "@/assets/project-2.png";
 import placeholder from "/placeholder.svg";
 
 const projects = [
+  // {
+  //   title: "Alianza La Libertad Avanza Córdoba",
+  //   description: "Plataforma web fullstack para la transparencia, acceso ágil y centralización de la información institucional de una organización política.",
+  //   image: project1,
+  //   technologies: ["Vue 3", "TypeScript", "Nuxt 3", "Tailwind CSS", "Supabase", "PostgreSQL", "Auth", "Storage"],
+  //   liveUrl: "https://www.alianzalalibertadavanzacordoba.com.ar/",
+  //   youtubeUrl: "https://www.youtube.com/watch?v=qX0PC89YqlY"
+  // },
   {
-    title: "Alianza La Libertad Avanza Córdoba",
+    title: "[Proyecto confidencial hasta noviembre]",
     description: "Plataforma web fullstack para la transparencia, acceso ágil y centralización de la información institucional de una organización política.",
-    image: project1,
+    image: "/catsule.png",
     technologies: ["Vue 3", "TypeScript", "Nuxt 3", "Tailwind CSS", "Supabase", "PostgreSQL", "Auth", "Storage"],
-    liveUrl: "https://www.alianzalalibertadavanzacordoba.com.ar/",
-    youtubeUrl: "https://www.youtube.com/watch?v=qX0PC89YqlY"
+    liveUrl: "#",
+    youtubeUrl: "#"
   },
   {
     title: "Entrenar.app",

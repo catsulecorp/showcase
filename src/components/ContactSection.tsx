@@ -33,7 +33,8 @@ const ContactSection = () => {
       company: formData.company,
       project_type: formData.projectType,
       message: formData.description,
-      to_email: 'catsulecorp@gmail.com'
+      to_email: 'catsulecorp@gmail.com',
+      to_name: 'Catsule Corp'
     };
 
     // Parámetros para el autoreply (al cliente)
