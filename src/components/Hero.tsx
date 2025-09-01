@@ -28,6 +28,28 @@ const Hero = () => {
   const handleMouseLeave = () => {
     setIsDragging(false);
   };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+    handleTouchMove(e);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    e.preventDefault();
+    if (!isDragging || !containerRef.current) return;
+    
+    const rect = containerRef.current.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    // Invertir la dirección para que sea más intuitivo
+    setImagePosition(Math.max(0, Math.min(100, 100 - percentage)));
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
       return (
       <section 
         ref={containerRef}
@@ -36,6 +58,9 @@ const Hero = () => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
                 {/* Background Image */}
           <div 
