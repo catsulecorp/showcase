@@ -38,9 +38,6 @@ const Header = () => {
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Inicio
             </Link>
-            <Link to="/proyectos" className="text-foreground hover:text-primary transition-colors">
-              Proyectos
-            </Link>
             <Link to="/nosotros" className="text-foreground hover:text-primary transition-colors">
               Nosotros
             </Link>
@@ -72,13 +69,6 @@ const Header = () => {
               onClick={closeMenu}
             >
               Inicio
-            </Link>
-            <Link 
-              to="/proyectos" 
-              className="block text-foreground hover:text-primary transition-colors py-2"
-              onClick={closeMenu}
-            >
-              Proyectos
             </Link>
             <Link 
               to="/nosotros" 

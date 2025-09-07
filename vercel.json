@@ -4,5 +4,77 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/fb",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fb/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ig",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ig/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tw",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tw/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/li",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/li/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/yt",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/yt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wa",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wa/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tg",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tg/:path*",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

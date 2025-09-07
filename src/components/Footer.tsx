@@ -54,7 +54,7 @@ const Footer = () => {
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2025 Catsule Corp. Todos los derechos reservados.
+            Catsule Corp © 2025 | Todos los derechos reservados
           </p>
         </div>
       </div>
