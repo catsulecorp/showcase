@@ -55,7 +55,7 @@ const AboutSection = () => {
               <div className="text-center group">
                 <a href="/proyectos" className="block">
                   <div className="bg-card p-8 rounded-2xl border border-accent shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">5+</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">3</div>
                     <p className="text-muted-foreground text-lg font-medium">Agentes Especializados</p>
                   </div>
                 </a>
@@ -63,7 +63,7 @@ const AboutSection = () => {
               <div className="text-center group">
                 <a href="/proyectos" className="block">
                   <div className="bg-card p-8 rounded-2xl border border-accent shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">2</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">5</div>
                     <p className="text-muted-foreground text-lg font-medium">Proyectos Completados</p>
                   </div>
                 </a>
