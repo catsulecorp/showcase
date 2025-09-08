@@ -7,39 +7,6 @@
   ],
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "fbclid"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "gclid"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "utm_source"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/fb",
       "destination": "/",
       "permanent": true
