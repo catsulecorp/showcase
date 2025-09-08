@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
+import URLCleaner from "./components/URLCleaner";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <URLCleaner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
