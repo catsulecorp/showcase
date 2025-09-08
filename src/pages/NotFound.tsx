@@ -24,15 +24,12 @@ const NotFound = () => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  if (showLoader) {
-    return <Loader />;
-  }
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       
-      <main className="flex-1 flex items-start md:items-center justify-center w-full pt-24 md:pt-0">
+      <main className="flex-1 flex items-start md:items-center justify-center w-full pt-24 md:pt-0 relative">
+        {showLoader && <Loader />}
         <div className="w-full h-auto md:h-full flex items-center justify-center">
           <img 
             src="/404.png" 
