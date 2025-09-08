@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Loader from "../components/Loader";
@@ -38,20 +38,12 @@ const NotFound = () => {
           />
         </div>
         
-        {/* Flecha izquierda para ir a Nosotros */}
+        {/* Flecha derecha para ir a Nosotros */}
         <Link
           to="/nosotros"
-          className="fixed left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-50 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-4 shadow-lg hover:bg-primary hover:text-background transition-all duration-300 group"
+          className="fixed right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-50 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300 group"
         >
-          <ChevronLeft className="h-6 w-6 md:h-7 md:w-7 group-hover:animate-none" />
-        </Link>
-        
-        {/* Flecha derecha para ir a Trabajemos Juntos */}
-        <Link
-          to="/contacto"
-          className="fixed right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-50 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-4 shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300 group"
-        >
-          <ChevronRight className="h-6 w-6 md:h-7 md:w-7 group-hover:animate-none" />
+          <ChevronRight className="h-6 w-6 md:h-6 md:w-6 group-hover:animate-none" />
         </Link>
       </main>
       

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const SideNavigation = () => {
   const location = useLocation();
@@ -12,25 +12,21 @@ const SideNavigation = () => {
       case '/':
         return {
           current: 'Inicio',
-          prev: null,
           next: { label: 'Nosotros', path: '/nosotros' }
         };
       case '/nosotros':
         return {
           current: 'Nosotros',
-          prev: { label: 'Inicio', path: '/' },
           next: { label: 'Trabajemos Juntos', path: '/contacto' }
         };
       case '/contacto':
         return {
           current: 'Trabajemos Juntos',
-          prev: { label: 'Nosotros', path: '/nosotros' },
           next: null
         };
       default:
         return {
           current: 'Inicio',
-          prev: null,
           next: { label: 'Nosotros', path: '/nosotros' }
         };
     }
@@ -40,18 +36,6 @@ const SideNavigation = () => {
 
   return (
     <>
-      {/* Flecha izquierda - oculta en mobile para la página Nosotros */}
-      {navigation.prev && (
-        <Link 
-          to={navigation.prev.path} 
-          className={`fixed left-2 md:left-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 hover:bg-primary hover:text-background transition-all duration-300 shadow-lg ${
-            location.pathname === '/nosotros' ? 'hidden md:block' : ''
-          }`}
-        >
-          <ChevronLeft className="h-6 w-6 md:h-6 md:w-6" />
-        </Link>
-      )}
-
       {/* Flecha derecha */}
       {navigation.next && (
         <Link 
