@@ -166,7 +166,7 @@ const ContactSection = () => {
                   />
                 </div>
                 
-                <Button type="submit" variant="hero" className="w-full">
+                <Button type="submit" variant="hero" className="w-full bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400">
                   Iniciar Orquestación
                 </Button>
                 </CardContent>

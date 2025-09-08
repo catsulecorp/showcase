@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import catsuleLogo from "/catsule-corp-logo-arg-transparent.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,6 +15,7 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-accent">
@@ -35,15 +37,34 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+            <Link 
+              to="/" 
+              className={`transition-colors ${
+                location.pathname === '/' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
               Inicio
             </Link>
-            <Link to="/nosotros" className="text-foreground hover:text-primary transition-colors">
+            <Link 
+              to="/nosotros" 
+              className={`transition-colors ${
+                location.pathname === '/nosotros' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
               Nosotros
             </Link>
           </nav>
           
-          <Button variant="tech" size="sm" asChild>
+          <Button 
+            variant="tech" 
+            size="sm" 
+            className={location.pathname === '/contacto' ? 'bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400' : ''}
+            asChild
+          >
             <Link to="/contacto">Trabajemos Juntos</Link>
           </Button>
         </div>
@@ -63,22 +84,36 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-accent shadow-lg">
           <nav className="container mx-auto px-6 py-4 space-y-4">
+            {/* Navegación principal */}
             <Link 
               to="/" 
-              className="block text-foreground hover:text-primary transition-colors py-2"
+              className={`block transition-colors py-2 ${
+                location.pathname === '/' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
               onClick={closeMenu}
             >
               Inicio
             </Link>
             <Link 
               to="/nosotros" 
-              className="block text-foreground hover:text-primary transition-colors py-2"
+              className={`block transition-colors py-2 ${
+                location.pathname === '/nosotros' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
               onClick={closeMenu}
             >
               Nosotros
             </Link>
             <div className="pt-2">
-              <Button variant="tech" size="sm" className="w-full" asChild>
+              <Button 
+                variant="tech" 
+                size="sm" 
+                className={`w-full ${location.pathname === '/contacto' ? 'bg-yellow-500 hover:bg-yellow-400 text-white border-yellow-500 hover:border-yellow-400' : ''}`}
+                asChild
+              >
                 <Link to="/contacto" onClick={closeMenu}>
                   Trabajemos Juntos
                 </Link>
