@@ -40,13 +40,15 @@ const SideNavigation = () => {
 
   return (
     <>
-      {/* Flecha izquierda */}
+      {/* Flecha izquierda - oculta en mobile para la página Nosotros */}
       {navigation.prev && (
         <Link 
           to={navigation.prev.path} 
-          className="fixed left-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 hover:bg-primary hover:text-background transition-all duration-300 shadow-lg"
+          className={`fixed left-2 md:left-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 hover:bg-primary hover:text-background transition-all duration-300 shadow-lg ${
+            location.pathname === '/nosotros' ? 'hidden md:block' : ''
+          }`}
         >
-          <ChevronLeft className="h-6 w-6" />
+          <ChevronLeft className="h-6 w-6 md:h-6 md:w-6" />
         </Link>
       )}
 
@@ -54,14 +56,14 @@ const SideNavigation = () => {
       {navigation.next && (
         <Link 
           to={navigation.next.path} 
-          className={`fixed right-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 hover:bg-yellow-500 hover:text-background transition-all duration-300 shadow-lg ${
+          className={`fixed right-2 md:right-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 hover:bg-yellow-500 hover:text-background transition-all duration-300 shadow-lg ${
             location.pathname === '/' ? 'animate-pulse' : ''
           }`}
           style={{
             animation: location.pathname === '/' ? 'slideRight 4s ease-in-out infinite' : 'none'
           }}
         >
-          <ChevronRight className="h-6 w-6" />
+          <ChevronRight className="h-6 w-6 md:h-6 md:w-6" />
         </Link>
       )}
       
