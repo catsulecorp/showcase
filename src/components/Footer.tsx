@@ -47,15 +47,21 @@ const Footer = () => {
             <ul className="space-y-2 text-background/80">
               <li><Link to="/contacto" onClick={scrollToTop} className="hover:text-yellow-500 transition-colors">catsulecorp@gmail.com</Link></li>
               <li><a href="https://www.linkedin.com/company/catsulecorp/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-glow transition-colors">LinkedIn</a></li>
+              <li><a href="https://x.com/CatsuleCorp" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 transition-colors">X</a></li>
               {/* <li>GitHub</li> */}
             </ul>
           </div>
         </div>
         
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
-          <p className="text-background/60">
-            Catsule Corp © 2025 | Todos los derechos reservados
-          </p>
+          <a 
+            href="https://gonza.gr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-background/60 hover:text-yellow-500 transition-colors"
+          >
+            💻 🧉 Desarrollado por Gonza
+          </a>
         </div>
       </div>
     </footer>
