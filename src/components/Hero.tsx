@@ -1,4 +1,4 @@
-import heroBackground from "/catusle-corp-hq.png";
+import heroBackground from "/catsule-corp-hq.png";
 
 const Hero = () => {
         return (

@@ -53,15 +53,18 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-background/20 mt-12 pt-8 text-center">
+        <div className="border-t border-background/20 mt-12 pt-8 flex justify-between items-center">
           <a 
             href="https://gonza.gr" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-background/60 hover:text-yellow-500 transition-colors"
           >
-            💻 🧉 Desarrollado por Gonza
+            Desarrollado por Gonza
           </a>
+          <span className="text-background/60">
+            Córdoba, Argentina 🇦🇷
+          </span>
         </div>
       </div>
     </footer>
