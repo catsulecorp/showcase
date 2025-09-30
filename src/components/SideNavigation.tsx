@@ -40,7 +40,7 @@ const SideNavigation = () => {
       {navigation.next && (
         <Link 
           to={navigation.next.path} 
-          className={`fixed right-2 md:right-4 top-1/2 -translate-y-1/2 z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 hover:bg-yellow-500 hover:text-background transition-all duration-300 shadow-lg ${
+          className={`absolute right-2 md:right-4 top-[50vh] z-40 bg-background/20 backdrop-blur-sm border border-accent rounded-full p-3 md:p-3 hover:bg-yellow-500 hover:text-background transition-all duration-300 shadow-lg ${
             location.pathname === '/' ? 'animate-pulse' : ''
           }`}
           style={{
@@ -51,13 +51,13 @@ const SideNavigation = () => {
         </Link>
       )}
       
-      <style jsx>{`
+      <style>{`
         @keyframes slideRight {
           0%, 85%, 100% {
-            transform: translateY(-50%) translateX(0);
+            translate: 0 0;
           }
           5%, 25% {
-            transform: translateY(-50%) translateX(6px);
+            translate: 6px 0;
           }
         }
       `}</style>

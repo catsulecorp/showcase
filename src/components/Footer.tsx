@@ -60,7 +60,7 @@ const Footer = () => {
             rel="noopener noreferrer" 
             className="text-background/60 hover:text-yellow-500 transition-colors"
           >
-            Desarrollado por Gonza
+            💻 🧉 Desarrollado por Gonza
           </a>
           <span className="text-background/60">
             Córdoba, Argentina 🇦🇷
