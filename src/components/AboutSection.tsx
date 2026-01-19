@@ -1,82 +1,79 @@
-import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 import catsule from "/catsule.png";
 
 const AboutSection = () => {
+  const { t, isSpanish } = useLanguage();
+
+
   return (
-    <section id="about" className="min-h-screen bg-gradient-to-br from-background via-secondary/20 to-background">
-      <div className="container mx-auto px-6 py-20">
+    <section id="about" className="relative min-h-screen bg-[#0a0f1a] overflow-hidden py-32">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6">
-              Nosotros
+          <div className="flex flex-col items-center text-center mb-24">
+            <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4">Methodology</span>
+            <h2 className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 italic">
+              {t.about.title}
             </h2>
-            <div className="h-1 w-24 bg-primary mx-auto rounded-full" />
+            <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
           </div>
-          
-          <div className="space-y-16 mb-20">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div className="space-y-8">
-                <div>
-                                  <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                                  Nuestro Enfoque
+
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
+            <div className="relative group order-2 lg:order-1">
+              <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                <a href="https://t.co/PHecmJGMV6" target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src={catsule}
+                    alt="Catsule HQ"
+                    className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-transparent to-transparent opacity-60" />
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-10 order-1 lg:order-2 text-left">
+              <div className="space-y-6">
+                <h3 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  {t.about.approach.title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  En Catsule Corp orquestamos los mejores agentes de IA especializados para crear soluciones 
-                  digitales excepcionales. Nuestro enfoque combina innovación y creatividad para ir más allá 
-                  de lo convencional. Cada proyecto se convierte en una sinfonía donde cada agente aporta 
-                  su expertise único, resultando en soluciones que destacan por su calidad y precisión.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Ofrecemos <strong>Desarrollo Web</strong>, <strong>Sistemas a Medida</strong>, <strong>Integración de APIs</strong>, 
-                  creando soluciones sorprendentes que transforman ideas en realidades digitales.
-                </p>
+                <div className="space-y-6 text-lg text-white/60 font-light leading-relaxed">
+                  <p>{t.about.approach.description1}</p>
+                  <p>{t.about.approach.description2}</p>
                 </div>
               </div>
-              
-              <div className="relative group overflow-hidden rounded-2xl cursor-pointer">
-                <a href="https://t.co/PHecmJGMV6" target="_blank" rel="noopener noreferrer">
-                  <img 
-                    src={catsule} 
-                    alt="Catsule" 
-                    className="w-full h-80 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0" />
-                </a>
+
+              <div className="pt-8">
+                <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <span>Focused on stability and clean architecture</span>
+                </div>
               </div>
             </div>
-            
-
-
           </div>
-          
-          <div className="mt-20">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <a href="/proyectos" className="block">
-                  <div className="bg-card p-8 rounded-2xl border border-accent shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">3</div>
-                    <p className="text-muted-foreground text-lg font-medium">Agentes Especializados</p>
-                  </div>
-                </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { val: "3+", label: t.about.stats.agents },
+              { val: "5+", label: t.about.stats.projects },
+              { val: "100%", label: t.about.stats.satisfaction }
+            ].map((stat, i) => (
+              <div key={i} className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl text-center hover:border-white/20 transition-all duration-300">
+                  <div className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter">{stat.val}</div>
+                  <p className="text-primary/60 text-xs font-bold uppercase tracking-[0.2em]">{stat.label}</p>
+                </div>
               </div>
-              <div className="text-center group">
-                <a href="/proyectos" className="block">
-                  <div className="bg-card p-8 rounded-2xl border border-accent shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">5</div>
-                    <p className="text-muted-foreground text-lg font-medium">Proyectos Completados</p>
-                  </div>
-                </a>
-              </div>
-              <div className="text-center group">
-                <a href="/proyectos" className="block">
-                  <div className="bg-card p-8 rounded-2xl border border-accent shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">100%</div>
-                    <p className="text-muted-foreground text-lg font-medium">Satisfacción Del Cliente</p>
-                  </div>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
