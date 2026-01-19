@@ -4,11 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-// import Proyectos from "./pages/Proyectos";
-import Nosotros from "./pages/Nosotros";
-import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
 import URLCleaner from "./components/URLCleaner";
+import MetaHandler from "./components/MetaHandler";
 
 const queryClient = new QueryClient();
 
@@ -19,12 +17,15 @@ const App = () => (
       <Sonner />
       <URLCleaner />
       <BrowserRouter>
+        <MetaHandler />
         <Routes>
+          {/* Main English Route */}
           <Route path="/" element={<Index />} />
-          {/* <Route path="/proyectos" element={<Proyectos />} /> */}
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contacto" element={<Contacto />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Main Spanish Route */}
+          <Route path="/es" element={<Index />} />
+
+          {/* Fallback to NotFound */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
