@@ -101,10 +101,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-9 flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-2 text-[10px] font-bold tracking-widest uppercase">
-              <span className="text-white/20">© 2026</span>
-              <span className="text-white/5 hidden sm:block">|</span>
-              <span className="text-white/40">Mens sana in corpore sano</span>
+            <div className="md:col-span-9 flex justify-center md:justify-start items-center text-[10px] font-bold tracking-widest uppercase text-white/20">
+              © 2026 | Mens sana in corpore sano
             </div>
 
             <div className="md:col-span-3 flex justify-center md:justify-start">
